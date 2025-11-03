@@ -1,0 +1,170 @@
+/* style.css */
+
+header {
+  background: rgba(0, 0, 40, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* espace entre logo et titre */
+  padding: 1.5rem;
+  border-bottom: 2px solid #444;
+}
+
+header .logo {
+  max-width: 80px;
+  border-radius: 50%; /* arrondit ton logo */
+  border: 2px solid #ffd700; /* optionnel : petit contour doré */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ffd700;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #f0f0f0;
+  background: url("images/dentelles+hd.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+/* Superposition sombre pour lisibilité */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,20,0.7); /* voile sombre */
+  z-index: -1;
+}
+
+
+/* === Navigation === */
+nav {
+  background: rgba(20, 20, 60, 0.85);
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+nav ul li {
+  margin: 0 1rem;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+nav ul li a:hover {
+  background: rgba(255, 215, 0, 0.2);
+  border-radius: 8px;
+  color: #ffd700;
+}
+
+/* === Contenu principal === */
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* === Sections / cartes === */
+section {
+  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+section h2 {
+  color: #ffd700;
+  margin-top: 0;
+}
+
+/* === Cartes pour matériel / galerie === */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: rgba(30, 30, 60, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* === Galerie photo === */
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+.galerie img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.galerie img:hover {
+  transform: scale(1.05);
+}
+
+/* === Liens contact === */
+#contact a {
+  color: #ffd700; /* doré pour rester dans ton thème */
+  text-decoration: none;
+  font-weight: bold;
+}
+#contact a:hover {
+  color: #00a2ff; /* bleu lumineux au survol */
+  text-decoration: underline;
+}
+#contact img {
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+/* === Table éphéméride === */
+.calendar-events {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.calendar-events th, .calendar-events td {
+  padding: 0.75rem;
+  border: 1px solid rgba(255,255,255,0.2);
+  text-align: left;
+}
+.calendar-events th {
+  background: rgba(255,215,0,0.2);
+  color: #ffd700;
+}
+.calendar-events tr:hover {
+  background: rgba(255,215,0,0.1);
+}
+/* === Footer === */
